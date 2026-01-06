@@ -44,7 +44,7 @@ fc = 20  # Carrier frequency in Hz
 duration_seconds = len(encoding200) / 200
 t = np.linspace(0, duration_seconds, len(encoding200), endpoint=False)
 
-carrier_signal = np.cos(2 * np.pi * fc * t)
+carrier_signal = np.sin(2 * np.pi * fc * t)
 
 print(f"Length of time array (t): {len(t)}")
 print(f"Length of carrier signal: {len(carrier_signal)}")
