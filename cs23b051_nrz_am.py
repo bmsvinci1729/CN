@@ -64,3 +64,18 @@ plt.ylabel('Amplitude')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+
+
+import matplotlib.pyplot as plt
+
+time = np.arange(len(encoding200))
+
+plt.figure(figsize=(10, 5))
+plt.plot(time, encoding200)
+plt.title('NRZ Encoding with 200 bits per sample')
+plt.xlabel('200 bitsper sample')
+plt.ylabel('Amplitude')
+plt.grid(True)
+plt.ylim(-1.5, 1.5)
+plt.show()
