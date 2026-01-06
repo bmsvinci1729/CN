@@ -41,3 +41,26 @@ plt.grid(True)
 plt.ylim(-1.5, 1.5)
 plt.show()
 
+
+fc = 20  # Carrier frequency in Hz
+
+# Calculate the total duration based on the length of encoding200 and sampling_rate_hz
+duration_seconds = len(encoding200) / 200
+
+t = np.linspace(0, duration_seconds, len(encoding200), endpoint=False)
+
+carrier_signal = np.cos(2 * np.pi * fc * t)
+
+print(f"Length of time array (t): {len(t)}")
+print(f"Length of carrier signal: {len(carrier_signal)}")
+print("First 10 values of carrier_signal:")
+print(carrier_signal[:10])
+
+plt.figure(figsize=(10, 4))
+plt.plot(t, carrier_signal, label=f'Carrier Wave ({fc} Hz)')
+plt.title('Sinusoidal Carrier Wave')
+plt.xlabel('Time (s)')
+plt.ylabel('Amplitude')
+plt.legend()
+plt.grid(True)
+plt.show()
